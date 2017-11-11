@@ -35,7 +35,7 @@
 # - Properties are sometimes incorrectly highlighed
 #   for nested block collections (`- !!seq -`).
 ---
-name: YAML-ng
+name: Swagger
 file_extensions:
   - yaml
   - yml
@@ -150,11 +150,12 @@ variables:
   _type_value: '=' # http://yaml.org/type/value.html
   _type_merge: '<<' # http://yaml.org/type/merge.html
 
+  # MIKES: I removed the line "| ({{_type_int}})" from the below
+  # checked because it was messing with entity.name.tag.yaml scopes 
   _type_all: |-
     (?x:
         ({{_type_null}})
       | ({{_type_bool}})
-      | ({{_type_int}})
       | ({{_type_float}})
       | ({{_type_timestamp}})
       | ({{_type_value}})
