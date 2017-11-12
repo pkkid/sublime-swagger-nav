@@ -1,43 +1,58 @@
-# YAML Nav
+# Swagger Nav #
 
-Sublime Text 2/3 plugin for quick navigation in YAML files.
+Sublime Text 2/3 plugin for quick navigation in Swagger files. This plugin is
+based on the YAML Nav plugin written by Denis Diachkov. If you are looking for
+a more general YAML Nav plugin, you can go check out that project at:
+https://github.com/ddiachkov/sublime-yaml-nav.
+
+The following changes have been applied to make it a bit nicer to work with
+Swagger API files:
+
+* List all top-level and second-level items.
+* Only list deeper items if they are an object property.
+* Follow $ref symbols to easily find sub-items in references. 
 
 ![screenshot](screenshot.png)
 
-## Installation
+## Installation ##
 
-### With Package Control
+### Install with Package Control ###
 
-See http://wbond.net/sublime_packages/package_control/installation for instructions.
+See http://wbond.net/sublime_packages/package_control/installation for
+instructions. Open the palette (Control+Shift+P or Command+Shift+P) in Sublime
+Text and select Package Control: Install Package and then select "Swagger Nav"
+from the list.
 
-Open the palette (Control+Shift+P or Command+Shift+P) in Sublime Text and select Package Control: Install Package and then select "YAML Nav" from the list.
-
-### Manually
+### Manual Installation ###
 
  * cd <YOUR PACKAGES DIRECTORY> (eg. ~/Library/Application\ Support/Sublime\ Text\ 3/Packages)
- * git clone http://github.com/ddiachkov/sublime-yaml-nav
+ * git clone https://github.com/pkkid/sublime-swagger-nav
 
-## Key bindings
+### Key Bindings ###
 
-Command+R (Control+R) in YAML source will run "goto_yaml_symbol" command.
+ * Command+R in Swagger source will run "goto_yaml_symbol" command.
+ * Command+Shift+W in Swagger source will run "copy_yaml_symbol_to_clipboard" command.
 
-Command+Shift+W (Control+Shift+W) in YAML source will run "copy_yaml_symbol_to_clipboard" command.
+### Localization YAML's ###
 
-## Localization YAML's
+Since version 1.2.0 Swagger Nav tries to detect YAML's with localization data
+(ie. Rails locales) and automatically strips first tag when symbol is copied to
+the clipboard (Super+Shift+W). For example "en.active_record.attributes.entity.name"
+will be copied as "active_record.attributes.entity.name". This behavior can be
+disabled by setting ```"trim_language_tag_on_copy_from_locales": false``` in
+configuration file ("Swagger Nav.sublime-settings").
 
-Since version 1.2.0 YAML Nav tries to detect YAML's with localization data (ie. Rails locales) and automatically strips first tag when symbol is copied to the clipboard (Super+Shift+W). For example "en.active_record.attributes.entity.name" will be copied as "active_record.attributes.entity.name".
+### Symbols ###
 
-This behavior can be disabled by setting ```"trim_language_tag_on_copy_from_locales": false``` in configuration file ("YAML Nav.sublime-settings").
-
-## Symbols
-
-Since version 1.4.0 YAML Nav automatically trims leading colons from symbols. This behavior can be disabled by setting ```"trim_leading_colon": false``` in configuration file ("YAML Nav.sublime-settings").
+Swagger Nav automatically trims leading colons from symbols. This behavior can
+be disabled by setting ```"trim_leading_colon": false``` in configuration file
+("Swagger Nav.sublime-settings").
 
 ## Licence
 
-All of YAML Nav is licensed under the MIT licence.
+All of Swagger Nav is licensed under the MIT licence.
 
-  Copyright (c) 2013-2016 Denis Diachkov
+  Copyright (c) 2017 Michael Shepanski
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
