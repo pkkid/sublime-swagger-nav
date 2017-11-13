@@ -39,7 +39,7 @@ class SwaggerNavListener(sublime_plugin.EventListener):
     def on_load(self, view):
         if is_yaml_view(view):
             # Force our custom syntax
-            view.set_syntax_file("Packages/Swagger-Nav/YAML-ng.sublime-syntax")
+            view.set_syntax_file("Packages/Swagger-Nav/Swagger.sublime-syntax")
             # Build list after file load
             self.update_yaml_symbols(view)
 
