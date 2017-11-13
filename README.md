@@ -16,15 +16,6 @@ Swagger API files:
 
 ## Installation ##
 
-### Install with Package Control ###
-
-See http://wbond.net/sublime_packages/package_control/installation for
-instructions. Open the palette (Control+Shift+P or Command+Shift+P) in Sublime
-Text and select Package Control: Install Package and then select "Swagger Nav"
-from the list.
-
-### Manual Installation ###
-
  * cd <YOUR PACKAGES DIRECTORY> (eg. ~/Library/Application\ Support/Sublime\ Text\ 3/Packages)
  * git clone https://github.com/pkkid/sublime-swagger-nav
 
